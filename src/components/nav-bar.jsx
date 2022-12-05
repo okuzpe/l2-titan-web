@@ -1,4 +1,5 @@
 import Image from './image'
+import logo from './../assets/imgs/logo-blanco.png'
 import { Link } from 'react-router-dom'
 
 const navigation = [
@@ -9,12 +10,7 @@ const navigation = [
 const Logo = () => {
   return (
     <Link className='navbar-item' href='https://bulma.io'>
-      <Image
-        src={'https://bulma.io/images/bulma-logo-white.png'}
-        alt={'test'}
-        width={112}
-        height={28}
-      />
+      <Image src={logo} alt='logo' width={112} height={28} />
     </Link>
   )
 }
