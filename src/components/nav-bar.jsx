@@ -45,9 +45,8 @@ function NavBar() {
             <div className='navbar-item'>
               <div className='field is-grouped'>
                 <p className='control'>
-                  <Link
+                  <Link to={'login'}
                     className='button is-primary'
-                    href='https://github.com/jgthms/bulma/releases/download/0.9.4/bulma-0.9.4.zip'
                   >
                     <span className='icon'>
                       <i className='fas fa-download'></i>
