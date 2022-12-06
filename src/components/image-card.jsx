@@ -2,13 +2,15 @@
 
 const ImageCard = () => {
   return (
+    <div className='column is-one-quarter-desktop is-half-tablet'>
     <div className='card'>
-      <div className='card-image'>
-        <figure className='image'>
-          <img src='https://bulma.io/images/placeholders/1280x960.png' alt='Placeholder image' />
+      <div className='card-images'>
+        <figure className='image is-3by2'>
+          <img className='imagecard' src='ImageCard' />
         </figure>
       </div>
     </div>
+  </div>
   )
 }
 
