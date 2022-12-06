@@ -1,44 +1,66 @@
-import React from 'react'
+import { useState } from 'react'
 
-function Login() {
-  const handleChange = () => {
-    // const { name, value } = e.target
-    // this.setState({ [name]: value })
-  }
+export default function Login(addContact) {
 
-  const handleSubmit = () => {}
+
+const handleSubmit = (event) => {
+  event.preventDefault()
+
+  addContact(contactInfo)
+
+  setContactInfo({ name: '', email: '', phonenumber: '' })
+}
+  
+  const [contactInfo, setContactInfo] = useState({
+    name: '',
+    email: '',
+    phonenumber: '',
+  })
+
+   const handleChange = (event) => {
+     setContactInfo({ ...contactInfo, [event.target.name]: event.target.value })
+   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit()}>
-        <div className='control input is-primary'>
-          <input
-            className='input is-hover'
-            type='email'
-            name='email'
-            placeholder='Email address'
-            required
-            onChange={handleChange()}
-          />
+    <div className='form-container'>
+      <form  onSubmit={handleSubmit}>
+        <div className='hero'>
+          <h3 className='hero is-info'>Contact Form</h3>
         </div>
-        <div className='control input is-primary'>
-          <input
-            className='input is-hover'
-            type='password'
-            name='password'
-            placeholder='password'
-            required
-            onChange={handleChange()}
+        <div>
+          <input className='input is-hover'
+            onChange={(e) => handleChange(e)}
+            type='text'
+            name='name'
+            placeholder='Name'
+            value={contactInfo.name ?? ''}
+            defaultValue= {contactInfo.name}
           />
         </div>
         <div>
-          <button className='button is-dark' onSubmit={handleSubmit()}>
-            Log in
-          </button>
+          <input className='input is-hover'
+            onChange={(e) => handleChange(e)}
+            type='email'
+            name='email'
+            placeholder='Email'
+            value={contactInfo.email ?? ''}
+            defaultValue={contactInfo.email}
+          />
+        </div>
+        <div>
+          <input className='input is-hover'
+            onChange={(e) => handleChange(e)}
+            type='number'
+            name='phonenumber'
+            placeholder='Phone Number'
+            value={contactInfo.phonenumber ?? ''}
+            defaultValue = {contactInfo.phonenumber}
+          />
+        </div>
+        <div>
+          <button className='button is-primary'>Submit Contact</button>
         </div>
       </form>
     </div>
   )
 }
-
-export default Login
