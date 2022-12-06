@@ -38,23 +38,14 @@ const HomePage = () => {
         </div>
       </section>
       <section className='section homeSectionTwo'>
-        <div className='container'>
-          <h3 className='title is-3 has-text-centered has-text-white'>Title 3</h3>
-
-          <div className='is-flex is-justify-content-space-evenly'>
-            <div className='mx-5'>
-              <ImageCard />
-            </div>
-            <div className='mx-5'>
-              <ImageCard />
-            </div>
-            <div className='mx-5'>
-              <ImageCard />
-            </div>
-            <div className='mx-5'>
-              <ImageCard />
-            </div>
-          </div>
+        <div className='content is-large'>
+          <h3 className='title is-3 has-text-centered'>Title 3</h3>
+        </div>
+        <div className='columns is-multiline  is-align-content-center'>
+        <ImageCard></ImageCard>
+        <ImageCard></ImageCard>
+        <ImageCard></ImageCard>
+          
         </div>
       </section>
 
