@@ -1,14 +1,14 @@
 import Login from '../../components/login'
 
 const AuthPage = () => {
-  const data = (data) => {
-    console.log(data)
-  }
-
   return (
-    <div className='container is-max-desktop'>
-      <Login getData={data()} />
-    </div>
+    <section className='section is-large loginPage'>
+      <div className='columns is-mobile is-centered'>
+        <div className='column is-narrow '>
+          <Login />
+        </div>
+      </div>
+    </section>
   )
 }
 export default AuthPage

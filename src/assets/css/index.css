@@ -16,3 +16,21 @@
   width: 100%;
   background-position: center;
 }
+
+.homeSectionThree {
+  background-image: url('./../imgs/login3.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-color: '#66999';
+}
+
+.loginPage {
+  background-image: url('./../imgs/fondo.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: '#66999';
+}

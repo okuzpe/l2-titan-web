@@ -4,6 +4,7 @@ import ImageCard from '../../components/image-card'
 import logo from '../../assets/imgs/logo-blanco.png'
 import Discord from '../../components/discord'
 import VoteList from '../../components/vote-list'
+import TablePlayerInfo from '../../components/table-players-info'
 
 const Footer = () => {
   return (
@@ -33,43 +34,43 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className='section homeSectionTwo'>
-        <div className='content is-large'>
-          <h2 className='title is-2 has-text-centered'>Title 2</h2>
-        </div>
-        <div className='columns is-multiline  is-centered'>
-          <ImageCard></ImageCard>
-          <ImageCard></ImageCard>
-          <ImageCard></ImageCard>
+      <section className='section is-medium has-background-grey-dark '>
+        <div className='container has-text-centered '>
+          <h1 className='title has-text-white is-uppercase has-text-weight-bold'>Section</h1>
+          <div className='columns'>
+            <div className='column'>
+              <ImageCard></ImageCard>
+            </div>
+            <div className='column'>
+              <ImageCard></ImageCard>
+            </div>
+            <div className='column'>
+              <ImageCard></ImageCard>
+            </div>
+          </div>
         </div>
       </section>
-      <section className='section'>
-        <nav className='columns'>
-          <div className='column'>
-            <div>
-              <h2 className='title'>Tweets</h2>
-              <div className='body-level'>
-                <Discord />
-              </div>
+      <section className='section section is-medium homeSectionThree'>
+        <div className='container has-text-centered  '>
+          <div className='columns'>
+            <div className='column '>
+              <h2 className='title has-text-white is-uppercase has-text-weight-bold'>Discord</h2>
+              <Discord />
+            </div>
+            <div className='column '>
+              <h2 className='title has-text-white is-uppercase has-text-weight-bold'>
+                VOTE FOR US
+              </h2>
+              <VoteList />
+            </div>
+            <div className='column   '>
+              <h2 className='title has-text-white is-uppercase has-text-weight-bold'>
+                Top Players
+              </h2>
+              <TablePlayerInfo />
             </div>
           </div>
-          <div className='column'>
-            <div>
-              <h2 className='title'>VOTE FOR US</h2>
-              <div className='body-level'>
-                <VoteList />
-              </div>
-            </div>
-          </div>
-          <div className='column'>
-            <div>
-              <h2 className='title'>Tweets</h2>
-              <div className='body-level'>
-                <Discord />
-              </div>
-            </div>
-          </div>
-        </nav>
+        </div>
       </section>
 
       <Footer />

@@ -1,4 +1,5 @@
 function VoteList() {
+  // TODO
   return (
     <div className='is-flex is-flex-direction-column'>
       <button className='button is-large'>
