@@ -23,13 +23,15 @@ const Countdown = () => {
   }, [])
 
   return (
-    <div className='counter '>
-      <h2 className='mx-1 is-size-1 is-uppercase has-text-weight-bold'>Server Start in</h2>
-      <div className='is-flex is-align-content-space-between '>
-        <button className='button mx-1 is-large is-rounded has-text-weight-bold'>{days}d </button>
-        <button className='button mx-1 is-large is-rounded has-text-weight-bold'>{hours}h</button>
-        <button className='button mx-1 is-large is-rounded has-text-weight-bold'>{minutes}m</button>
-        <button className='button mx-1 is-large is-rounded has-text-weight-bold'>{seconds}s</button>
+    <div className='countdown'>
+      <h2 className='is-size-1 is-uppercase has-text-white has-text-weight-bold '>
+        Server Start in
+      </h2>
+      <div className='is-flex  '>
+        <button className='button is-large is-rounded has-text-weight-bold'>{days}d </button>
+        <button className='button is-large is-rounded has-text-weight-bold'>{hours}h</button>
+        <button className='button is-large is-rounded has-text-weight-bold'>{minutes}m</button>
+        <button className='button is-large is-rounded has-text-weight-bold'>{seconds}s</button>
       </div>
     </div>
   )

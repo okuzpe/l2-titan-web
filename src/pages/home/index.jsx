@@ -2,6 +2,8 @@ import Countdown from '../../components/countdown'
 import Image from '../../components/image'
 import ImageCard from '../../components/image-card'
 import logo from '../../assets/imgs/logo-blanco.png'
+import Discord from '../../components/discord'
+import VoteList from '../../components/vote-list'
 
 const Footer = () => {
   return (
@@ -21,32 +23,53 @@ const Footer = () => {
 const HomePage = () => {
   return (
     <div className='HomePage'>
-      <section className=' homeSectionOne'>
-        <div className='container is-max-widescreen  has-text-white'>
-          <div className='hero is-medium '>
-            <div className='hero-body '>
-              <Image src={logo} alt='logo' width={300} height={300} />
-              {/* <h1 className='title is-size-1 is-uppercase has-text-weight-bold has-text-white'>
-                Hero title
-              </h1> */}
-              {/* <p className='subtitle has-text-white'>Hero subtitle</p> */}
-            </div>
+      <section className='hero is-large  homeSectionOne'>
+        <div className='hero-body'>
+          <div className='title '>
+            <Image src={logo} alt='logo' width={300} height={300} />
           </div>
-          <div className=''>
+          <div className='container'>
             <Countdown />
           </div>
         </div>
       </section>
       <section className='section homeSectionTwo'>
         <div className='content is-large'>
-          <h3 className='title is-3 has-text-centered'>Title 3</h3>
+          <h2 className='title is-2 has-text-centered'>Title 2</h2>
         </div>
-        <div className='columns is-multiline  is-align-content-center'>
-        <ImageCard></ImageCard>
-        <ImageCard></ImageCard>
-        <ImageCard></ImageCard>
-          
+        <div className='columns is-multiline  is-centered'>
+          <ImageCard></ImageCard>
+          <ImageCard></ImageCard>
+          <ImageCard></ImageCard>
         </div>
+      </section>
+      <section className='section'>
+        <nav className='columns'>
+          <div className='column'>
+            <div>
+              <h2 className='title'>Tweets</h2>
+              <div className='body-level'>
+                <Discord />
+              </div>
+            </div>
+          </div>
+          <div className='column'>
+            <div>
+              <h2 className='title'>VOTE FOR US</h2>
+              <div className='body-level'>
+                <VoteList />
+              </div>
+            </div>
+          </div>
+          <div className='column'>
+            <div>
+              <h2 className='title'>Tweets</h2>
+              <div className='body-level'>
+                <Discord />
+              </div>
+            </div>
+          </div>
+        </nav>
       </section>
 
       <Footer />
