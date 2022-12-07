@@ -41,13 +41,25 @@ function NavBar() {
             <div className='navbar-item'>
               <div className='field is-grouped'>
                 <p className='control'>
-                  <Link to={'login'}
-                    className='button is-primary'
-                  >
+                  <Link to={'login'} className='button is-primary'>
                     <span className='icon'>
                       <i className='fas fa-download'></i>
                     </span>
                     <span>Login</span>
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className='navbar-end'>
+            <div className='navbar-item'>
+              <div className='field is-grouped'>
+                <p className='control'>
+                  <Link to={'register'} className='button is-primary'>
+                    <span className='icon'>
+                      <i className='fa-solid fa-registered'></i>
+                    </span>
+                    <span>Register</span>
                   </Link>
                 </p>
               </div>
