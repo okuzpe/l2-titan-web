@@ -1,56 +1,69 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-function log() {
-  console.log('holis')
+const initialForm = {
+  email: '',
+  password: '',
 }
-
-export default function Login() {
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    setContactInfo({ name: '', email: '', phonenumber: '' })
+function Login() {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // validateForm() TODO
+    console.log(contactInfo)
   }
+  // const validateForm = () => {} //TODO
 
-  const [contactInfo, setContactInfo] = useState({
-    name: '',
-    email: '',
-    phonenumber: '',
-  })
+  const [contactInfo, setContactInfo] = useState(initialForm)
 
-  const handleChange = (event) => {
-    setContactInfo({ ...contactInfo, [event.target.name]: event.target.value })
+  const handleChange = (e) => {
+    setContactInfo({ ...contactInfo, [e.target.name]: e.target.value })
   }
 
   return (
-    <div className='form-container'>
+    <div className='form-container box'>
       <form onSubmit={handleSubmit}>
-        <div className='hero'>
-          <h3 className='hero is-info'>Contact Form</h3>
+        <div className='field'>
+          <p className='control has-icons-left has-icons-right'>
+            <input
+              className='input'
+              type='email'
+              placeholder='Email'
+              onChange={(e) => handleChange(e)}
+            />
+            <span className='icon is-small is-left'>
+              <i className='fas fa-envelope'></i>
+            </span>
+            <span className='icon is-small is-right'>
+              <i className='fas fa-check'></i>
+            </span>
+          </p>
         </div>
-        <div>
-          <input
-            className='input is-hover'
-            onChange={(e) => handleChange(e)}
-            type='text'
-            name='name'
-            placeholder='Name'
-          />
+        <div className='field'>
+          <p className='control has-icons-left'>
+            <input
+              className='input'
+              type='password'
+              placeholder='Password'
+              onChange={(e) => handleChange(e)}
+            />
+            <span className='icon is-small is-left'>
+              <i className='fas fa-lock'></i>
+            </span>
+          </p>
         </div>
-        <div>
-          <input
-            className='input is-hover'
-            onChange={(e) => handleChange(e)}
-            type='email'
-            name='email'
-            placeholder='Email'
-          />
-        </div>
-        <div>
-          <button className='button is-primary' onClick={log}>
-            Log in
-          </button>
+        <div className='field is-grouped  is-grouped-centered'>
+          <p className='control'>
+            <button className='button  is-info'>Login</button>
+          </p>
+          <p className='control'>
+            <Link to='/home' className='button is-light'>
+              Back
+            </Link>
+          </p>
         </div>
       </form>
     </div>
   )
 }
+
+export default Login

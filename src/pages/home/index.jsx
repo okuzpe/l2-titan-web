@@ -2,6 +2,9 @@ import Countdown from '../../components/countdown'
 import Image from '../../components/image'
 import ImageCard from '../../components/image-card'
 import logo from '../../assets/imgs/logo-blanco.png'
+import Discord from '../../components/discord'
+import VoteList from '../../components/vote-list'
+import TablePlayerInfo from '../../components/table-players-info'
 
 const Footer = () => {
   return (
@@ -21,31 +24,52 @@ const Footer = () => {
 const HomePage = () => {
   return (
     <div className='HomePage'>
-      <section className=' homeSectionOne'>
-        <div className='container is-max-widescreen  has-text-white'>
-          <div className='hero is-medium '>
-            <div className='hero-body '>
-              <Image src={logo} alt='logo' width={300} height={300} />
-              {/* <h1 className='title is-size-1 is-uppercase has-text-weight-bold has-text-white'>
-                Hero title
-              </h1> */}
-              {/* <p className='subtitle has-text-white'>Hero subtitle</p> */}
-            </div>
+      <section className='hero is-large  homeSectionOne'>
+        <div className='hero-body'>
+          <div className='title '>
+            <Image src={logo} alt='logo' width={300} height={300} />
           </div>
-          <div className=''>
+          <div className='container'>
             <Countdown />
           </div>
         </div>
       </section>
-      <section className='section homeSectionTwo'>
-        <div className='content is-large'>
-          <h3 className='title is-3 has-text-centered'>Title 3</h3>
+      <section className='section is-medium has-background-grey-dark '>
+        <div className='container has-text-centered '>
+          <h1 className='title has-text-white is-uppercase has-text-weight-bold'>Section</h1>
+          <div className='columns'>
+            <div className='column'>
+              <ImageCard></ImageCard>
+            </div>
+            <div className='column'>
+              <ImageCard></ImageCard>
+            </div>
+            <div className='column'>
+              <ImageCard></ImageCard>
+            </div>
+          </div>
         </div>
-        <div className='columns is-multiline  is-align-content-center'>
-        <ImageCard></ImageCard>
-        <ImageCard></ImageCard>
-        <ImageCard></ImageCard>
-          
+      </section>
+      <section className='section section is-medium homeSectionThree'>
+        <div className='container has-text-centered  '>
+          <div className='columns'>
+            <div className='column '>
+              <h2 className='title has-text-white is-uppercase has-text-weight-bold'>Discord</h2>
+              <Discord />
+            </div>
+            <div className='column '>
+              <h2 className='title has-text-white is-uppercase has-text-weight-bold'>
+                VOTE FOR US
+              </h2>
+              <VoteList />
+            </div>
+            <div className='column   '>
+              <h2 className='title has-text-white is-uppercase has-text-weight-bold'>
+                Top Players
+              </h2>
+              <TablePlayerInfo />
+            </div>
+          </div>
         </div>
       </section>
 
