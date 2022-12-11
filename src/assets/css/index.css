@@ -8,6 +8,19 @@
 .footer {
   background-color: hsl(0, 0%, 14%);
 }
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-image: url('./../imgs/fondo1.jpg');
+  height: 100vh;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+}
+/* 
 .homeSectionOne {
   background-image: url('./../imgs/fondo1.jpg');
   background-position: center center;
@@ -16,7 +29,7 @@
   width: 100%;
   background-position: center;
 }
-
+ */
 .homeSectionThree {
   background-image: url('./../imgs/login3.jpg');
   background-position: center center;
