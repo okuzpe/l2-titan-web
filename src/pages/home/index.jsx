@@ -24,7 +24,11 @@ const Footer = () => {
 const HomePage = () => {
   return (
     <div className='HomePage'>
-      <section className='hero is-large  homeSectionOne'>
+      <section className='hero is-large  homeSectionOne src="..imgs/fondo1.jpg"
+srcset="..imgs/fondo1.jpg 1x,
+..imgs/fondo1.jpg 2x,
+..imgs/fondo1.jpg.jpg 3x"
+alt="imagen de lineage"'>
         <div className='hero-body'>
           <div className='title '>
             <Image src={logo} alt='logo' width={300} height={300} />
