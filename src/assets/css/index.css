@@ -8,27 +8,6 @@
 .footer {
   background-color: hsl(0, 0%, 14%);
 }
-.hero {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  align-self: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  align-items: center;
-  justify-content: center;
-}
-/* 
-.homeSectionOne {
-  background-image: url('./../imgs/fondo1.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 1072px;
-  width: 100%;
-  background-position: center;
-}
- */
 .homeSectionThree {
   background-image: url('./../imgs/login3.jpg');
   background-position: center center;
@@ -36,6 +15,24 @@
   /* background-attachment: fixed; */
   background-size: cover;
   background-color: '#66999';
+}
+.img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero {
+  background: url(../imgs/fondo1.jpg) center / cover;
+}
+@media (max-width: 1024px) {
+  .hero {
+    background: url(../imgs/fondo1@2x.jpg) center / cover;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    background: url(../imgs/fondo1@3x.jpg) center / cover;
+  }
 }
 
 .loginPage {

@@ -24,21 +24,11 @@ const Footer = () => {
 const HomePage = () => {
   return (
     <div className='HomePage'>
-      <section className='hero is-large  homeSectionOne'>
+      <section className='hero is-large homeSectionOne'>
         <div className='hero-body'>
-          <img
-            className='imagen'
-            src='../.imgs/fondo1.jpg'
-            srcSet='/imgs/fondo1.jpg 1x,
-            /imgs/fondo1@x2.jpg 2x,
-            /imgs/fondo1@x3.jpg 3x '
-            alt='imagen de lineage'
-          />
-          <div className='title '>
+          <Countdown />
+          <div className='title'>
             <Image src={logo} alt='logo' width={300} height={300} />
-          </div>
-          <div className='container'>
-            <Countdown />
           </div>
         </div>
       </section>
