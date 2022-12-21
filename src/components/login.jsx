@@ -53,7 +53,7 @@ function Login() {
         </div>
         <div className='field is-grouped  is-grouped-centered'>
           <p className='control'>
-            <button className='button  is-info'>Login</button>
+            <button className='button is-info'>Login</button>
           </p>
           <p className='control'>
             <Link to='/home' className='button is-light'>
