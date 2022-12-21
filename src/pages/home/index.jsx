@@ -24,13 +24,11 @@ const Footer = () => {
 const HomePage = () => {
   return (
     <div className='HomePage'>
-      <section className='hero is-large  homeSectionOne'>
+      <section className='hero is-large homeSectionOne'>
         <div className='hero-body'>
-          <div className='title '>
+          <Countdown />
+          <div className='title'>
             <Image src={logo} alt='logo' width={300} height={300} />
-          </div>
-          <div className='container'>
-            <Countdown />
           </div>
         </div>
       </section>
