@@ -1,16 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../assets/imgs/castle.png'
+import Image from './imageRegister'
+
 
 export default function Register() {
+ 
+  const handleSubmit =  (event) => {
+    event.preventDefault()
+}
+
 
   return (
     <div className='form-container box'>
       <div>
-        <form>
-          <div className='columns'>
+        <div className='title'>
+          <Image src={logo} alt={logo} width={400} height={400}> </Image>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className='container'>
             <div>
               <input
-                className='input is-hover'
+                className='input is-hover is-three-quarters'
                 type='text'
                 name='name'
                 placeholder='Name'
@@ -18,7 +29,7 @@ export default function Register() {
               />
             </div>
           </div>
-          <div className='columns'>
+          <div className='container'>
             <div>
               <input
                 className='input is-hover'
@@ -29,7 +40,7 @@ export default function Register() {
               />
             </div>
           </div>
-          <div className='columns'>
+          <div className='container'>
             <div>
               <input
                 className='input is-hover'
@@ -40,7 +51,7 @@ export default function Register() {
               />
             </div>
           </div>
-          <div className='columns'>
+          <div className='container'>
             <div>
               <input
                 className='input is-hover'

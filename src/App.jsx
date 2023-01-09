@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './components/nav-bar'
+import Rates from './components/rates'
 import Register from './components/register'
 import { Download, Home, ServerInfo } from './pages'
 import Login from './pages/auth'
@@ -15,6 +16,7 @@ function App() {
         <Route path='/server-info' element={<ServerInfo />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/rates' element={<Rates />} />
       </Routes>
     </BrowserRouter>
   )
