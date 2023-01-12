@@ -1,24 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/imgs/castle.png'
 import Image from './imageRegister'
-
+import '../assets/css/index.css'
 
 export default function Register() {
- 
-  const handleSubmit =  (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
-}
-
+  }
 
   return (
-    <div className='form-container box'>
+    <div className='container'>
       <div>
-        <div className='title'>
-          <Image src={logo} alt={logo} width={400} height={400}> </Image>
+        <div className=' registerPage'>
+          <Image>
+            {' '}
+          </Image>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className='container'>
+          <div className='section'>
             <div>
               <input
                 className='input is-hover is-three-quarters'
@@ -29,7 +28,7 @@ export default function Register() {
               />
             </div>
           </div>
-          <div className='container'>
+          <div className='section is-gapless'>
             <div>
               <input
                 className='input is-hover'
@@ -40,7 +39,7 @@ export default function Register() {
               />
             </div>
           </div>
-          <div className='container'>
+          <div className='section'>
             <div>
               <input
                 className='input is-hover'
@@ -51,7 +50,7 @@ export default function Register() {
               />
             </div>
           </div>
-          <div className='container'>
+          <div className='section'>
             <div>
               <input
                 className='input is-hover'
@@ -74,6 +73,7 @@ export default function Register() {
                   Back
                 </Link>
               </p>
+              <br/>
             </div>
           </div>
         </form>
