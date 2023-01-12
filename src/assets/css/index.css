@@ -43,3 +43,28 @@
   background-size: cover;
   background-color: '#66999';
 }
+
+
+.registerPage {
+  background-image: url("../imgs/castle.png");
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color:bisque;
+}
+
+.footerTitle{
+  text-decoration: dotted;
+  text-size-adjust:initial;
+  color:slategrey;
+  text-align: center;
+  text-size-adjust:initial;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:x-large;
+  font-weight: bolder;
+}
+
+.footerText {
+  text-align: right;
+}
